@@ -20,7 +20,7 @@ struct SummarizationInput: Codable {
 }
 
 public struct SummarizationOutput: Codable {
-	let summaryText: String
+	public let summaryText: String
 }
 
 extension HfInference {

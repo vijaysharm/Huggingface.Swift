@@ -5,9 +5,9 @@
 import Foundation
 
 public struct ImageSegmentationOutput: Codable {
-	let label: String
-	let mask: String
-	let score: Float
+	public let label: String
+	public let mask: String
+	public let score: Float
 }
 
 extension HfInference {

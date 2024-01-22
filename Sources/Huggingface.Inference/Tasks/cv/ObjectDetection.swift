@@ -5,16 +5,16 @@
 import Foundation
 
 public struct ObjectDetectionBoxOutput: Codable {
-	let xmin: Int
-	let xmax: Int
-	let ymin: Int
-	let ymax: Int
+	public let xmin: Int
+	public let xmax: Int
+	public let ymin: Int
+	public let ymax: Int
 }
 
 public struct ObjectDetectionOutput: Codable {
-	let label: String
-	let score: Float
-	let bod: ObjectDetectionBoxOutput
+	public let label: String
+	public let score: Float
+	public let box: ObjectDetectionBoxOutput
 }
 
 extension HfInference {

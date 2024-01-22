@@ -8,12 +8,12 @@ public struct AudioClassificationOutput: Codable {
 	/**
 	 * The label for the class (model specific)
 	 */
-	let label: String
+	public let label: String
 
 	/**
 	 * A float that represents how likely it is that the audio file belongs to this class.
 	 */
-	let score: Float
+	public let score: Float
 }
 
 extension HfInference {

@@ -13,14 +13,13 @@ public struct DocumentQuestionAnsweringOutput: Codable {
 	/**
 	 * A string that’s the answer within the document.
 	 */
-	let answer: String?
-	let start: Int?
-	let end: Int?
+	public let answer: String?
+	public let start: Int?
+	public let end: Int?
 	/**
 	 * A float that represents how likely that the answer is correct
 	 */
-	let score: Float?
-	
+	public let score: Float?
 }
 
 extension HfInference {

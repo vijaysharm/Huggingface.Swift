@@ -5,7 +5,7 @@
 import Foundation
 
 public struct ImageToTextOutput: Codable {
-	let generatedText: String
+	public let generatedText: String
 }
 
 extension HfInference {

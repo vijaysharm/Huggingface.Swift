@@ -13,11 +13,11 @@ public struct VisualQuestionAnsweringOutput: Codable {
 	/**
 	 * A string that’s the answer to a visual question.
 	 */
-	let answer: String
+	public let answer: String
 	/**
 	 * Answer correctness score.
 	 */
-	let score: Float
+	public let score: Float
 }
 
 extension HfInference {

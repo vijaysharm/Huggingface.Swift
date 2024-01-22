@@ -22,11 +22,11 @@ struct TokenClassificationInputs: Codable {
 }
 
 public struct TokenClassificationOutput: Codable {
-	let entityGroup: String
-	let score: Float
-	let word: String
-	let start: Int
-	let end: Int
+	public let entityGroup: String
+	public let score: Float
+	public let word: String
+	public let start: Int
+	public let end: Int
 }
 
 extension HfInference {

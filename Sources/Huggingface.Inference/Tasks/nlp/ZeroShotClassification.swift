@@ -15,9 +15,9 @@ struct ZeroShotClassificationInputs: Codable {
 }
 
 public struct ZeroShotClassificationOutput: Codable {
-	let labels: [String]
-	let scores: [Float]
-	let sequence: String
+	public let labels: [String]
+	public let scores: [Float]
+	public let sequence: String
 }
 
 extension HfInference {

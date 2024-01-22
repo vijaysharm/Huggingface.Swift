@@ -26,13 +26,13 @@ struct ConversationalInputs: Codable {
 }
 
 public struct ConversationOutput: Codable {
-	let pastUserInputs: [String]
-	let generatedResponses: [String]
+	public let pastUserInputs: [String]
+	public let generatedResponses: [String]
 }
 
 public struct ConversationalOutput: Codable {
-	let generatedText: String
-	let conversation: ConversationOutput
+	public let generatedText: String
+	public let conversation: ConversationOutput
 }
 
 extension HfInference {

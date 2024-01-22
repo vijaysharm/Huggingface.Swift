@@ -5,7 +5,7 @@
 import Foundation
 
 public struct AutomaticSpeechRecognitionOutput: Codable {
-	let text: String
+	public let text: String
 }
 
 extension HfInference {

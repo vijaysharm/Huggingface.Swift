@@ -8,17 +8,17 @@ public struct AudioToAudioOutput: Codable {
 	/**
 	 * The label for the audio output (model specific)
 	 */
-	let label: String
+	public let label: String
 
 	/**
 	 * Base64 encoded audio output.
 	 */
-	let blob: String
+	public let blob: String
 
 	/**
 	 * Content-type for blob, e.g. audio/flac
 	 */
-	let contentType: String
+	public let contentType: String
 	
 	enum CodingKeys : String, CodingKey {
 		case label = "label"

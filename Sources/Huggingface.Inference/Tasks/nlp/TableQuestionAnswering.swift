@@ -17,19 +17,19 @@ public struct TableQuestionAnsweringOutput: Codable {
 	/**
 	 * The aggregator used to get the answer
 	 */
-	let aggregator: String
+	public let aggregator: String
 	/**
 	 * The plaintext answer
 	 */
-	let answer: String
+	public let answer: String
 	/**
 	 * A list of coordinates of the cells contents
 	 */
-	let cells: [String]
+	public let cells: [String]
 	/**
 	 * a list of coordinates of the cells referenced in the answer
 	 */
-	let coordinates: [[Float]]
+	public let coordinates: [[Float]]
 }
 
 extension HfInference {

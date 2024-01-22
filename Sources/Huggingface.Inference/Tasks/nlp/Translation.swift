@@ -9,7 +9,7 @@ struct TranslationInputs: Codable {
 }
 
 public struct TranslationOutput: Codable {
-	let translationText: String
+	public let translationText: String
 }
 
 extension HfInference {

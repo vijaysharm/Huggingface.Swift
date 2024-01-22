@@ -9,10 +9,10 @@ struct FillMaskInput: Codable {
 }
 
 public struct FillMaskOutput: Codable {
-	let sequence: String
-	let score: Float
-	let token: Int
-	let tokenStr: String
+	public let sequence: String
+	public let score: Float
+	public let token: Int
+	public let tokenStr: String
 }
 
 extension HfInference {

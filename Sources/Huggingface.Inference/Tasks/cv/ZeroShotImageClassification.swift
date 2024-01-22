@@ -14,8 +14,8 @@ struct ZeroShotImageClassificationInputs: Codable {
 }
 
 public struct ZeroShotImageClassificationOutput: Codable {
-	let label: String
-	let score: Float
+	public let label: String
+	public let score: Float
 }
 
 extension HfInference {

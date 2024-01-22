@@ -14,10 +14,10 @@ struct QuestionAnsweringInputs: Codable {
 }
 
 public struct QuestionAnsweringOutput: Codable {
-	let answer: String
-	let end: Int
-	let score: Float
-	let start: Int
+	public let answer: String
+	public let end: Int
+	public let score: Float
+	public let start: Int
 }
 
 extension HfInference {

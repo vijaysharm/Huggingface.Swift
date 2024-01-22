@@ -24,7 +24,7 @@ struct TextGenerationInputs: Codable {
 }
 
 public struct TextGenerationOutput: Codable {
-	let generatedText: String
+	public let generatedText: String
 }
 
 extension HfInference {
@@ -76,7 +76,7 @@ extension HfInference {
 		model: String? = nil,
 		options: HfInferenceOptions = .init()
 	) async throws -> [String] {
-		fatalError()
+		fatalError("Unimplemented")
 //		return try await execute(
 //			model: model,
 //			taskHint: .translation,
