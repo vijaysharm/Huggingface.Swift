@@ -12,7 +12,12 @@ let package = Package(
 	products: [
 		.library(
 			name: "Huggingface.Swift",
-			targets: ["Huggingface.Inference"]),
+			targets: ["Huggingface.Inference"]
+		),
+		.library(
+			name: "Huggingface.Inference",
+			targets: ["Huggingface.Inference"]
+		),
 	],
 	targets: [
 		.target(

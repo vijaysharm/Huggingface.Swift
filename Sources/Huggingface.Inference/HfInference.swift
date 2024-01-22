@@ -12,7 +12,7 @@ public class HfInference {
 	
 	let log: LoggerProtocol
 	
-	init(
+	public init(
 		accessToken: String = "",
 		fetch: FetchProtocol,
 		logLevel: LogLevel = .info
@@ -24,7 +24,7 @@ public class HfInference {
 		self.metadata = HuggingfaceModelsMetdataManager(fetch: fetch)
 	}
 	
-	convenience init(
+	public convenience init(
 		accessToken: String = "",
 		session: URLSession = URLSession.shared,
 		logLevel: LogLevel = .info
