@@ -210,7 +210,7 @@ final class HuggingfaceTests: XCTestCase {
 		let actual = try await hf.zeroShotClassification(
 			inputs: ["Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed"],
 			candidateLabels: ["refund", "legal", "faq"],
-			model: "Helsinki-NLP/opus-mt-ru-en"
+			model: "facebook/bart-large-mnli"
 		)
 		
 		XCTAssertEqual(expected[0].sequence, actual[0].sequence)
@@ -638,46 +638,5 @@ final class HuggingfaceTests: XCTestCase {
 			model: "impira/layoutlm-document-qa"
 		)
 		XCTAssertEqual(expected[0].answer, actual[0].answer)
-	}
-}
-
-extension HuggingfaceTests {
-	func xtestExecute() async throws {
-		let sessionConfig = URLSessionConfiguration.default
-		sessionConfig.timeoutIntervalForRequest = 230.0
-		sessionConfig.timeoutIntervalForResource = 260.0
-		let session = URLSession(configuration: sessionConfig)
-
-		let hf = HfInference(
-			session: session,
-			logLevel: logLevel
-		)
-		let actual = try await hf.textToSpeech(
-			inputs: "Hello World!",
-			model: "facebook/fastspeech2-en-ljspeech"
-		)
-		let filename = UUID().uuidString
-		try actual.write(to: URL(filePath: "/tmp/\(filename)"))
-	}
-	
-	func testExecute() async throws {
-		
-		let data = try Data(contentsOf: Bundle.module.url(forResource: "invoice", withExtension: "png")!)
-		
-		let sessionConfig = URLSessionConfiguration.default
-		sessionConfig.timeoutIntervalForRequest = 230.0
-		sessionConfig.timeoutIntervalForResource = 260.0
-		let session = URLSession(configuration: sessionConfig)
-		
-		let hf = HfInference(
-			session: session,
-			logLevel: logLevel
-		)
-		
-		let actual = try await hf.fillMask(
-			inputs: ["Help me make [MASK]"],
-			options: .init(waitForModel: true)
-		)
-		print(actual)
 	}
 }
