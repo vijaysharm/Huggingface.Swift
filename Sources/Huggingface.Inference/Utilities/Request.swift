@@ -94,7 +94,10 @@ struct ModelRequest: Request {
 	}
 	
 	func createURLRequest() throws -> URLRequest {
-		var urlRequest = URLRequest(url: options.url)
+		var urlRequest = URLRequest(
+			url: options.url,
+			cachePolicy: .reloadIgnoringLocalCacheData
+		)
 		urlRequest.httpMethod = "POST"
 		
 		if let token = options.accessToken, !token.isEmpty {
